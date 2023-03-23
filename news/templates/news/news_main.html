@@ -1,0 +1,9 @@
+{% extends 'django_app/layout.html' %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+    {% for article in news %}
+        {% include 'news/article.html' %}
+    {% endfor %}
+{% endblock %}

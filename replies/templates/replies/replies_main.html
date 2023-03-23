@@ -1,0 +1,9 @@
+{% extends 'django_app/layout.html' %}
+
+{% block title %}Отзывы{% endblock %}
+
+{% block content %}
+    {% for reply in replies %}
+        {% include 'replies/reply.html' %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,20 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.btn-read-more').click(function() {
+    $(this).parent().find('.news-text').toggle();
+    return false;
+  });
+  $('.news-text').hide();
+});
+</script>
+<div class="news">
+  <h2>{{ article.title }}</h2>
+  <p>{{ article.intro }}</p>
+  <br>
+  <p class="news-text">{{ article.text }}</p>
+  <button class="btn-read-more">Подробнее</button>
+  <p class="date">{{ article.date }}</p>
+  <br>
+</div>
+<br>

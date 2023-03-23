@@ -1,0 +1,15 @@
+<div class="navigation">
+  <ul>
+    <li {%if 'home' in request.path %}class="active"{%endif%}><a href="{% url 'home' %}">Главная</a></li>
+    <li {%if 'solar_system' in request.path %}class="active"{%endif%}><a href="{% url 'solar_system' %}">Солнечная система</a></li>
+    <li {%if 'galaxies' in request.path %}class="active"{%endif%}><a href="{% url 'galaxies' %}">Галактики</a></li>
+    <li {%if 'missions' in request.path %}class="active"{%endif%}><a href="{% url 'missions' %}">Космические миссии</a></li>
+    <li {%if 'news/' in request.path %}class="active"{%endif%}><a href="{% url 'news_main' %}">Новости</a></li>
+    <li {%if 'shop' in request.path %}class="active"{%endif%}><a href="{% url 'shop' %}">Магазин</a></li>
+    <li {%if 'replies/' in request.path %}class="active"{%endif%}><a href="{% url 'replies_main' %}">Отзывы</a></li>
+      <br>
+    <li> <a href="{% url 'create_news' %}"><button class="btn btn-info">Добавить новость</button></a></li>
+      <br>
+    <li> <a href="{% url 'create_reply' %}"><button class="btn btn-info">Добавить отзыв</button></a></li>
+  </ul>
+</div>
